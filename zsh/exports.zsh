@@ -8,6 +8,7 @@
 # brainstormr=~/Projects/development/planetargon/brainstormr
 # cd $brainstormr
 #
-alias live='/Applications/Ableton\ Live\ 9\ Suite.app/Contents/MacOS/Live'
-alias cdc='cd && clear'
-alias please='sudo $(fc -nl -1)'
+export DEFAULT_USER='rrishi'
+export EDITOR='vim'
+export HOMEBREW_CASK_OPTS='--caskroom=/opt/homebrew-cask/Caskroom'
+export TERM='xterm-256color'
