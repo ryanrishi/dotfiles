@@ -56,6 +56,9 @@ source $ZSH/oh-my-zsh.sh
 source $ZSH/custom/aliases.zsh
 source $ZSH/custom/exports.zsh
 
+# iTerm2 Shell Integration
+source ~/.iterm2_shell_integration.zsh
+
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/opt/go/libexc/bin"
 
 # You may need to manually set your language environment
