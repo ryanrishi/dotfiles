@@ -89,6 +89,9 @@ eval "$(thefuck --alias)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# RVM stuff
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# RVM
+# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# NVM
+# source $(brew --prefix nvm)/nvm.sh
