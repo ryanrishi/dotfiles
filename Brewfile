@@ -22,7 +22,9 @@ brew cask install freeze
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install java
+brew cask install keepassx
 brew cask install omnigraffle
+brew cask install password-assistant
 brew cask install polar-clock
 brew cask install postman
 brew cask install slack
