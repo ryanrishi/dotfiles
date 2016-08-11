@@ -1,3 +1,13 @@
+# PROFILE_STARTUP time taken from https://kev.inburke.com/kevin/profiling-zsh-startup-time/
+# PROFILE_STARTUP=true
+if [[ "$PROFILE_STARTUP" == true ]]; then
+	zmodload zsh/zprof # Output load-time statistics
+	# http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
+	PS4=$'%D{%M%S%.} %N:%i> '
+	exec 3>&2 2>"${XDG_CACHE_HOME:-$HOME/tmp}/zsh_statup.$$"
+	setopt xtrace prompt_subst
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/rrishi/.oh-my-zsh
 
@@ -95,3 +105,10 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # NVM
 # source $(brew --prefix nvm)/nvm.sh
+
+if [[ "$PROFILE_STARTUP" == true ]]; then
+	zprof
+	unsetopt xtrace
+	exec 2>&3 3>&-
+fi
+
