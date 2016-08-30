@@ -30,6 +30,8 @@ brew cask install postman
 brew cask install slack
 brew cask install sourcetree
 brew cask install spotify
+brew cask install vlc
 brew cask install vmware-fusion
+brew cask install zoomus
 
 brew cleanup
