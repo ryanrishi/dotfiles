@@ -1,0 +1,3 @@
+apm install minimap
+
+
