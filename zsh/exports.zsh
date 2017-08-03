@@ -8,7 +8,10 @@
 # brainstormr=~/Projects/development/planetargon/brainstormr
 # cd $brainstormr
 #
-export DEFAULT_USER='rrishi'
+export DEFAULT_USER=`whoami`
 export EDITOR='vim'
 export HOMEBREW_CASK_OPTS='--caskroom=/opt/homebrew-cask/Caskroom'
 export TERM='xterm-256color'
+export NVM_DIR="$HOME/.nvm"
+export USER_NAME="Ryan Rishi"
+
