@@ -1,21 +1,17 @@
-# PROFILE_STARTUP time taken from https://kev.inburke.com/kevin/profiling-zsh-startup-time/
-# PROFILE_STARTUP=true
-if [[ "$PROFILE_STARTUP" == true ]]; then
-	zmodload zsh/zprof # Output load-time statistics
-	# http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
-	PS4=$'%D{%M%S%.} %N:%i> '
-	exec 3>&2 2>"${XDG_CACHE_HOME:-$HOME/tmp}/zsh_statup.$$"
-	setopt xtrace prompt_subst
-fi
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/rrishi/.oh-my-zsh
+export ZSH=/Users/ryanrishi/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+#ZSH_THEME="agnoster"
+ZSH_THEME="miloshadzic"
+#ZSH_THEME="avit"
+# ZSH_THEME="ys"
+# ZSH_THEME="powerlevel9k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -59,17 +55,16 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew git)
+plugins=(brew git mvn)
+# aws brew git osx
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
-source $ZSH/oh-my-zsh.sh
-source $ZSH/custom/aliases.zsh
-source $ZSH/custom/exports.zsh
 
-# iTerm2 Shell Integration
-source ~/.iterm2_shell_integration.zsh
+bindkey "[C" forward-word
+bindkey "[D" backward-word
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/opt/go/libexc/bin"
+# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -95,20 +90,16 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/l
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#. "$(brew --prefix nvm)/nvm.sh"
 eval "$(thefuck --alias)"
+#source ~/git/powerlevel9k/powerlevel9k.zsh-theme
+#export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+export PATH="/usr/local/mysql/bin:$PATH"
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+#export PATH="/Users/ryanrishi/.virtualenv/gis/bin:$PATH"
 
-# RVM
-# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-# NVM
-# source $(brew --prefix nvm)/nvm.sh
-
-if [[ "$PROFILE_STARTUP" == true ]]; then
-	zprof
-	unsetopt xtrace
-	exec 2>&3 3>&-
-fi
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+source ~/.oh-my-zsh/custom/nvm-lazy-load.sh
 
