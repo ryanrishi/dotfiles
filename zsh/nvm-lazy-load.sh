@@ -1,3 +1,4 @@
+#!/bin/bash
 # http://broken-by.me/lazy-load-nvm/
 nvm() {
     unset -f nvm
