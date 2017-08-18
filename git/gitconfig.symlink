@@ -1,44 +1,30 @@
-# Local/private config goes in the include
-[include]
-	path = ~/.gitconfig.local
-
-[hub]
-  protocol = https
-
+[core]
+	excludesfile = /Users/ryanrishi/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[credential]
+	helper = osxkeychain
+[user]
+	name = Ryan Rishi
+	email = ryan@jelli.com
+	userConfigOnly = true
+[commit]
+	template = /Users/ryanrishi/.stCommitMsg
+[color "diff"]
+	whitespace = red reverse
 [alias]
-  co = checkout
-	promote = !$ZSH/bin/git-promote
-	wtf     = !$ZSH/bin/git-wtf
-	rank-contributors = !$ZSH/bin/git-rank-contributors
-	count   = !git shortlog -sn
-	hist = log --color --pretty=format:\"%C(yellow)%h%C(reset) %s%C(bold red)%d%C(reset) %C(green)%ad%C(reset) %C(blue)[%an]%C(reset)\" --relative-date --decorate
+	hist =log --color --pretty=format:\"%C(yellow)%h%C(reset) %s%C(bold red)%d%C(reset) %C(green)%ad%C(reset) %C(blue)[%an]%C(reset)\" --relative-date --decorate
+	# unstage = reset HEAD --
+	# restore = checkout --
+	# cn = commit --no-verify
+	# co = checkout
+	# praise = blame
+	# visualise = !gitk
 	graph = log --color --graph --pretty=format:\"%h | %ad | %an | %s%d\" --date=short
 
-[color]
-	diff = auto
-	status = auto
-	branch = auto
-	ui = true
-
-[core]
-	excludesfile = ~/.gitignore
-	editor = vim
-
-[apply]
-	whitespace = nowarn
-
-[mergetool]
-	keepBackup = false
-
-[difftool]
-	prompt = false
-
-[help]
-	autocorrect = 1
-
-[push]
-  # See `git help config` (search for push.default)
-  # for more information on different options of the below setting.
-  #
-  # Setting to git 2.0 default to suppress warning message
-	default = simple
+[merge]
+	tool = opendiff
