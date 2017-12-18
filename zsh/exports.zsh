@@ -10,8 +10,9 @@
 #
 export DEFAULT_USER=`whoami`
 export EDITOR='vim'
-export HOMEBREW_CASK_OPTS='--caskroom=/opt/homebrew-cask/Caskroom'
+# HOMEBREW_CASK_OPTS removed 2017-11-29 - https://github.com/caskroom/homebrew-cask/issues/40291
+#export HOMEBREW_CASK_OPTS='--caskroom=/opt/homebrew-cask/Caskroom'
 export TERM='xterm-256color'
 export NVM_DIR="$HOME/.nvm"
 export USER_NAME="Ryan Rishi"
-
+export MPD_HOST=$HOME/.mpd/socket		# not sure if this works. check out `bind_to_address` in mpd.conf
