@@ -10,7 +10,7 @@
 	helper = osxkeychain
 [user]
 	name = Ryan Rishi
-	email = ryan@jelli.com
+	email = ryan@ryanrishi.com
 	userConfigOnly = true
 [commit]
 	template = /Users/ryanrishi/.stCommitMsg
