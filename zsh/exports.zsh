@@ -16,3 +16,8 @@ export TERM='xterm-256color'
 export NVM_DIR="$HOME/.nvm"
 export USER_NAME="Ryan Rishi"
 export MPD_HOST=$HOME/.mpd/socket		# not sure if this works. check out `bind_to_address` in mpd.conf
+export GOPATH=~/git/go
+export JAVA_HOME=/Library/Java/Home
+
+SPACESHIP_NODE_SHOW=false
+

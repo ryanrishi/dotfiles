@@ -1,3 +1,6 @@
+# profile ZSH startup (also zprof at end of this file)
+# zmodload zsh/zprof
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -51,14 +54,15 @@ ZSH_THEME="awesomepanda"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mvn kubectl)
-# aws brew git osx
+# Other useful plugins:  brew git osx kubectl
+plugins=(aws git mvn kafka terraform)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 bindkey "[C" forward-word
 bindkey "[D" backward-word
+bindkey '^[^M' self-insert-unmeta
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -86,18 +90,37 @@ bindkey "[D" backward-word
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#. "$(brew --prefix nvm)/nvm.sh"
+
+# . "$(brew --prefix nvm)/nvm.sh"
 eval "$(thefuck --alias)"
 #source ~/git/powerlevel9k/powerlevel9k.zsh-theme
 #export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
-export PATH="/usr/local/mysql/bin:$PATH"
+# export PATH="/usr/local/mysql/bin:$PATH"
 
 #export PATH="/Users/ryanrishi/.virtualenv/gis/bin:$PATH"
 
+# include local node_modules/.bin in PATH
+export PATH="$(npm bin):$PATH"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-source ~/.oh-my-zsh/custom/nvm-lazy-load.sh
+# point go to its binaries
+# export PATH="$PATH:$(go env GOPATH)/bin"
+
+# use python3 for default python installation
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+# Ruby
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export GEM_HOME="$HOME/.gem"
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# kubectl completion
+# source <(kubectl completion zsh)
+
+# profile ZSH startup (also at beginning of this file)
+# zprof
+
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

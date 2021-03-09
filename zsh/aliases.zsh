@@ -13,7 +13,12 @@ alias cdc='cd && clear'
 alias please='sudo $(fc -nl -1)'
 alias ls='ls -G'
 alias ds_delete="find . -name '*.DS_Store' -type f -delete"
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias chrome-insecure="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --allow-running-insecure-content --disable-web-security --user-data-dir=/Users/$(whoami)/.chrome-do-not-touch"
 alias nuke="rm -rf node_modules && rm -rf bower_components && npm i && bower i"
 alias loadnvm='[ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh"'
 alias embers="ember s"
+
+# https://stackoverflow.com/questions/9679932/how-to-use-package-installed-locally-in-node-modules
+#alias npm-exec='PATH=$(npm bin):$PATH'
+

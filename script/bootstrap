@@ -130,27 +130,27 @@ install_dotfiles () {
 
   local overwrite_all=false backup_all=false skip_all=false
 
-  for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
+  for src in $(find -H "$DOTFILES_ROOT/vim" -name '*.symlink' -not -path '*.git*')
   do
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
 }
 
-setup_gitconfig
+# setup_gitconfig
 install_dotfiles
 
 # If we're on a Mac, let's install and setup homebrew.
-if [ "$(uname -s)" == "Darwin" ]
-then
-  info "installing dependencies"
-  if source bin/dot > /tmp/dotfiles-dot 2>&1
-  then
-    success "dependencies installed"
-  else
-    fail "error installing dependencies"
-  fi
-fi
+# if [ "$(uname -s)" == "Darwin" ]
+# then
+#   info "installing dependencies"
+#   if source bin/dot > /tmp/dotfiles-dot 2>&1
+#   then
+#     success "dependencies installed"
+#   else
+#     fail "error installing dependencies"
+#   fi
+# fi
 
 echo ''
 echo '  All installed!'

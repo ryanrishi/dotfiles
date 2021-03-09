@@ -30,3 +30,11 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
+defaults write com.apple.dock showhidden -bool YES
+
+# Disable Software Update notification on System Preferences icon
+defaults write com.apple.systempreferences AttentionPrefBundleIDs 0
+
+# Don't show screenshot preview
+defaults.write com.apple.screencapture show-thumbnail 0
+
