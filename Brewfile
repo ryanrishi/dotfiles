@@ -1,37 +1,168 @@
-brew update
-
-brew install ffmpeg
-brew install git
-brew install go
-brew install htop
-brew install irssi
-brew install nmap
-brew install node
-brew install openssl
-brew install screenfetch
-brew install sox --with-lame --with-flac
-brew install thefuck
-brew install tree
-brew install vim
-brew install wget --with-iri
-
-brew cask install atom
-brew cask install caffeine
-brew cask install flash
-brew cask install freeze
-brew cask install google-chrome
-brew cask install iterm2
-brew cask install java
-brew cask install keepassx
-brew cask install omnigraffle
-brew cask install password-assistant
-brew cask install polar-clock
-brew cask install postman
-brew cask install slack
-brew cask install sourcetree
-brew cask install spotify
-brew cask install vlc
-brew cask install vmware-fusion
-brew cask install zoomus
-
-brew cleanup
+tap "codeclimate/formulae"
+tap "deviceinsight/packages"
+tap "github/gh"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "mopidy/mopidy"
+tap "osgeo/osgeo4mac"
+tap "weaveworks/tap"
+brew "ack"
+brew "libyaml"
+brew "readline"
+brew "ansible"
+brew "ansible-lint"
+brew "ant"
+brew "libevent"
+brew "armadillo"
+brew "asciinema"
+brew "gettext"
+brew "glib"
+brew "python@3.8"
+brew "autoconf"
+brew "automake"
+brew "awk"
+brew "aws-iam-authenticator"
+brew "awscli"
+brew "bash"
+brew "bazaar"
+brew "boost"
+brew "brew-cask-completion"
+brew "cgal"
+brew "libtool"
+brew "libidn2"
+brew "nghttp2"
+brew "gobject-introspection"
+brew "ffmpeg"
+brew "mad"
+brew "mp4v2"
+brew "cmus"
+brew "coreutils"
+brew "openldap"
+brew "curl"
+brew "doxygen"
+brew "eye-d3"
+brew "fftw"
+brew "flake8", link: false
+brew "fluid-synth"
+brew "flyway"
+brew "node"
+brew "fx"
+brew "gdk-pixbuf"
+brew "geos"
+brew "gh"
+brew "gifsicle"
+brew "git"
+brew "glib-networking"
+brew "gnu-tar"
+brew "go"
+brew "gocr"
+brew "gradle"
+brew "graphviz"
+brew "gstreamer"
+brew "gst-plugins-bad"
+brew "gtk+3"
+brew "libpsl"
+brew "gst-plugins-good"
+brew "gst-plugins-ugly"
+brew "gst-python"
+brew "helm"
+brew "htop"
+brew "imagemagick"
+brew "iproute2mac"
+brew "ipython", link: false
+brew "jack"
+brew "jmeter"
+brew "jq"
+brew "k9s"
+brew "kafka"
+brew "kubernetes-cli"
+brew "libao"
+brew "libxml2"
+brew "libdap"
+brew "libid3tag"
+brew "libksba"
+brew "libmagic"
+brew "libpq"
+brew "libspatialite", link: false
+brew "libssh"
+brew "lynx"
+brew "maven"
+brew "mdbtools"
+brew "minikube"
+brew "mpc"
+brew "mpd", restart_service: true
+brew "mysql"
+brew "ncmpcpp"
+brew "nmap"
+brew "numpy", link: false
+brew "nvm"
+brew "openapi-generator"
+brew "pandoc"
+brew "poppler"
+brew "postgresql", link: false
+brew "proxychains-ng"
+brew "pv"
+brew "ruby"
+brew "sox"
+brew "spatialite-tools"
+brew "sphinx-doc"
+brew "swagger-codegen@2"
+brew "telnet"
+brew "terraform"
+brew "tflint"
+brew "thefuck"
+brew "tmux"
+brew "tomcat"
+brew "tomcat@8"
+brew "tree"
+brew "vim"
+brew "watch"
+brew "watchman"
+brew "wget"
+brew "wireguard-tools"
+brew "wireshark", link: false
+brew "yamllint"
+brew "yarn"
+brew "yq"
+brew "zplug"
+brew "deviceinsight/packages/kafkactl"
+brew "mopidy/mopidy/mopidy", link: false
+brew "osgeo/osgeo4mac/osgeo-pyspatialite"
+cask "atom"
+cask "caffeine"
+cask "chromedriver"
+cask "db-browser-for-sqlite"
+cask "disk-inventory-x"
+cask "docker"
+cask "flash-npapi"
+cask "flash-player"
+cask "flash-ppapi"
+cask "gdal-framework"
+cask "google-chrome"
+cask "google-chrome-canary"
+cask "intellij-idea"
+cask "iterm2"
+cask "journal"
+cask "keepassx"
+cask "mysqlworkbench"
+cask "ngrok"
+cask "notion"
+cask "password-assistant"
+cask "postman"
+cask "pycharm-ce"
+cask "qgis"
+cask "qlmarkdown"
+cask "slack"
+cask "sonos"
+cask "sonos-s1-controller"
+cask "sourcetree"
+cask "spotify"
+cask "sqlworkbenchj"
+cask "steam"
+cask "virtualbox"
+cask "virtualbox-extension-pack"
+cask "zoom"
