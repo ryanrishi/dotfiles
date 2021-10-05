@@ -1,0 +1,18 @@
+{
+    "editor.multiCursorModifier": "ctrlCmd",
+    "telemetry.enableTelemetry": false,
+    "debug.javascript.autoAttachFilter": "smart",
+    "editor.scrollBeyondLastLine": false,
+    "workbench.colorTheme": "Tokyo Night",
+    "extensions.ignoreRecommendations": true,
+    "redhat.telemetry.enabled": false,
+    "terminal.integrated.scrollback": 10000,
+    "editor.tabSize": 2,
+    "emmet.excludeLanguages": [
+        "markdown",
+        "javascript",
+        "typescript",
+        "typescriptreact",
+        "javascriptreact"
+    ],
+}
